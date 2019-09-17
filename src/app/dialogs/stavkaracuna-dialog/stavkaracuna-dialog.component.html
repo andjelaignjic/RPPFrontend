@@ -1,0 +1,35 @@
+<mat-form-field>
+  <input matInput [(ngModel)]="data.redniBroj" placeholder="Redni broj:" required>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [(ngModel)]="data.kolicina" placeholder="Kolicina:" required>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [(ngModel)]="data.jedinicaMere" placeholder="Jedinica mere:" required>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [(ngModel)]="data.cena" placeholder="Cena:" required>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-select [(ngModel)]="data.racun" placeholder="Racun" name="racun">
+    <mat-option *ngFor="let racun of racuni" [value]="racun">
+      {{ racun.datum }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-select [(ngModel)]="data.proizvod" placeholder="Proizvod" name="proizvod">
+    <mat-option *ngFor="let proizvod of proizvodi" [value]="proizvod">
+      {{ proizvod.naziv }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-button [mat-dialog-close]="data">Potvrdi</button>
+<button mat-button mat-dialog-close>Zatvori</button>
+

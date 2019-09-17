@@ -1,0 +1,15 @@
+<mat-form-field>
+  <input matInput [(ngModel)]="data.naziv" placeholder="Naziv:" required>
+</mat-form-field>
+
+<mat-form-field>
+  <mat-select [(ngModel)]="data.proizvodjac" placeholder="Proizvodjac" name="proizvodjac">
+    <mat-option *ngFor="let proizvodjac of proizvodjaci" [value]="proizvodjac">
+      {{ proizvodjac.naziv }}
+    </mat-option>
+  </mat-select>
+</mat-form-field>
+
+<button mat-button [mat-dialog-close]="data">Potvrdi</button>
+<button mat-button mat-dialog-close>Zatvori</button>
+

@@ -1,0 +1,14 @@
+<mat-form-field>
+  <input matInput [(ngModel)]="data.naziv" placeholder="Naziv:" required>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [(ngModel)]="data.adresa" placeholder="Adresa:" required>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [(ngModel)]="data.kontakt" placeholder="Kontakt:" required>
+</mat-form-field>
+
+<button mat-button mat-dialog-close>Zatvori</button>
+<button mat-button [mat-dialog-close]="data">Potvrdi</button>
